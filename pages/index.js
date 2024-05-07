@@ -14,6 +14,7 @@ import design from "../public/design.png";
 import Image from "next/image";
 import Modal from "../components/Modal";
 import { projects } from "../constants";
+import Contact from "./Contact";
 
 
 
@@ -68,10 +69,10 @@ const toggleEdit = (index) => {
 
 
             </p>
-            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-10 md:h-96 md:w-96">
-              <Image src={victor} alt="photo" layout="fill" objectFit="cover" />
+            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 relative overflow-hidden mt-10 md:h-96 md:w-96">
+              <Image src={victor} alt="photo" layout="fill" objectFit="contain" />
             </div>
-            <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
+            <div className="text-5xl flex justify-center gap-16 py-8 text-gray-600 dark:text-gray-400">
               <a href="https://github.com/Vicktor007"><FaGithub /></a>
               <a href="mailto:vicktord007@gmail.com"><MdOutlineMail /></a>
               <a href="www.linkedin.com/in/victor-olayiwola-140176259"><AiFillLinkedin /></a>
@@ -80,8 +81,8 @@ const toggleEdit = (index) => {
           </div>
         </section>
         <section>
-          <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Services I offer</h3>
+          <div className="dark:text-white">
+            <h3 className="text-3xl py-1 ">Services I offer</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
             I am a front end web developer with 2 years experience working with javascript, node.js, express and mongodb to
             create backend web servers. I use react + redux to render the database information and manage state efficiently to
@@ -162,17 +163,17 @@ const toggleEdit = (index) => {
             
 
           {projects.map((project, index) => (
-  <div key={index} className="basis-1/3 flex-1  bg-slate-50">
-    <span>{project.name}</span>
+  <div key={index} className="basis-1/3 flex-1  bg-slate-50 p-4 rounded-md shadow-lg">
+    <span className=" p-4">{project.name}</span>
               <Image
-                className="rounded-lg  object-cover"
+                className="rounded-lg my-4 shadow-lg  object-cover"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
                 src={project.image}
                 alt={project.name}
               />
-    <button onClick={() => toggleEdit(index)} className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8">See More</button>
+    <button onClick={() => toggleEdit(index)} className=" shadow-lg bg-gradient-to-r from-cyan-500 text- to-teal-500 my-6  text-white px-4 py-2 border-none rounded-md ml-8">See More</button>
     
     <Modal 
       isOpen={openModalIndex === index}
@@ -194,11 +195,12 @@ const toggleEdit = (index) => {
           </div>
         </section>
         <section className="py-10">
-          {/* <Contact/> */}
+          <Contact/>
         </section>
-        <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-              <a href=""><FaGithub /></a>
-              <a href=""><AiFillLinkedin /></a>
+        <div className="text-5xl flex justify-center gap-16 pb-8 text-gray-600 dark:text-gray-400">
+        <a href="https://github.com/Vicktor007"><FaGithub /></a>
+              <a href="mailto:vicktord007@gmail.com"><MdOutlineMail /></a>
+              <a href="www.linkedin.com/in/victor-olayiwola-140176259"><AiFillLinkedin /></a>
             </div>
       </main>
 

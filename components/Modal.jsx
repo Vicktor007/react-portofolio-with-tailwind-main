@@ -24,13 +24,13 @@ const Modal = ({
         <Image
           src={image}
           alt='project_image'
-          className='w-full h-full object-fit rounded-2xl'
+          className='w-full h-full object-fit rounded-2xl mt-3'
         />
 
         <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
           <div
             onClick={() => window.open(source_code_link, "_blank")}
-            className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+            className='black-gradient w-10 h-10 rounded-full flex justify-center items-center backdrop-blur-md hover:bg-gray-800 cursor-pointer'
           >
             <Image
               src={github}
@@ -46,7 +46,7 @@ const Modal = ({
         <p className='mt-2 text-secondary text-[14px]'>{description}</p>
       </div>
 
-      <div className='mt-4 flex flex-wrap gap-2'>
+      <div className='my-4 flex flex-wrap gap-2'>
         {tags?.map((tag) => (
           <p
             key={`${name}-${tag.name}`}
@@ -56,8 +56,8 @@ const Modal = ({
           </p>
         ))}
       </div>
-      <a href={live_site_link} target="_blank" rel="noreferrer" className="mt-3 blue-text-gradient">Visit live site</a>
-      <button onClick={toggleEdit} className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8">Close</button>
+      <a href={live_site_link} target="_blank" rel="noreferrer" className="mt-6 p-3 blue-text-gradient rounded-md shadow-lg hover:bg-slate-200 bg-white">Visit live site</a>
+      <button onClick={toggleEdit} className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none shadow-lg rounded-md ml-8">Close</button>
 
       </div>
       
