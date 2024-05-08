@@ -161,6 +161,7 @@ const testimonials = [
 const projects = [
   {
     name: "E-Shop",
+    detail: "E-commerce website with Payment modes integrated",
     description:
       "E-commerce website that allows users to register and sign in to save thier desired products for later or place an order for it to be delivered. It also gives the Seller the admin priviledge to manage both the users registered and the products on sale. It has an admin dashboard to track the orders and sales made daily.",
     tags: [
@@ -191,6 +192,7 @@ const projects = [
   },
   {
     name: "E-stock",
+    detail: "An Inventory management website",
     description:
       "A website that allows users to manage their inventory and also keep track of the expiry dates of the products in store. It has qrcode qeneration integrated into it to create a qrcode that can be sticked to the product. The user can scan the qrcode and get the informaton about the particular product.",
     tags: [

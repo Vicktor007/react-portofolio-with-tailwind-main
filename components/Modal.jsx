@@ -18,8 +18,8 @@ const Modal = ({
   }
 
   return (
-    <div className=' p-5 rounded-2xl   ease-in w-[100vw] h-[100vh] fixed top-0 left-0 z-40 backdrop-blur-md'>
-      <div className="w-[50%] h-full m-auto">
+    <div className=' p-5 rounded-2xl dark:bg-gray-900 overflow-y-auto  ease-in w-[100vw] h-[100vh] fixed top-0 left-0 z-40 backdrop-blur-md'>
+      <div className="max-w-[500px] h-full m-auto ">
       <div className='relative w-full h-[300px]'>
         <Image
           src={image}
@@ -41,12 +41,12 @@ const Modal = ({
         </div>
       </div>
 
-      <div className='mt-5'>
+      <div className='mt-5 dark:text-gray-300'>
         <h3 className='text-grey font-bold text-[24px]'>{name}</h3>
         <p className='mt-2 text-secondary text-[14px]'>{description}</p>
       </div>
 
-      <div className='my-4 flex flex-wrap gap-2'>
+      <div className='my-4 flex flex-wrap gap-2 dark:text-gray-400'>
         {tags?.map((tag) => (
           <p
             key={`${name}-${tag.name}`}
